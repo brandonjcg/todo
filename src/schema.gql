@@ -1,0 +1,12 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Query {
+  """Hello world from GraphQL"""
+  helloWorld: String!
+  randomNumber: Float!
+
+  """Random number from zero to X number (default 6)"""
+  randomFromZeroTo(to: Int): Int!
+}
