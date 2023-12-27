@@ -8,7 +8,21 @@ export class TodoService {
     { id: 1, description: 'Learn Nest.js', done: false },
     { id: 2, description: 'Learn GraphQL', done: false },
     { id: 3, description: 'Learn TypeScript', done: true },
+    { id: 4, description: 'Learn JavaScript', done: true },
+    { id: 5, description: 'Learn React', done: false },
   ];
+
+  get totalTodos(): number {
+    return this.todos.length;
+  }
+
+  get completedTodos(): number {
+    return this.todos.filter((todo) => todo.done).length;
+  }
+
+  get pendingTodos(): number {
+    return this.todos.filter((todo) => !todo.done).length;
+  }
 
   findAll(statusArgs: StatusArgs): Todo[] {
     if (statusArgs.status !== undefined)
